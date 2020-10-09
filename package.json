@@ -1,6 +1,6 @@
 {
   "name": "gigen",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": ".gitignore file generate",
   "main": "app.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "bin": {
     "gigen": "app.js"
   },
-  "keywords": [],
+  "keywords": [".gitignore", "cli", "generate", "omit"],
   "author": "",
   "license": "ISC",
   "dependencies": {
