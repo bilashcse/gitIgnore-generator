@@ -30,6 +30,7 @@ const getGeneratedFileValue = async (value = "node") => {
 };
 
 const createFile = async (filePath, contents) => {
+  console.log("===createFile===", filePath);
   try {
     return new Promise((resolve, reject) => {
       fs.writeFile(filePath, contents, "utf-8", function (err) {
@@ -46,6 +47,7 @@ const createFile = async (filePath, contents) => {
 };
 
 const overWriteFile = async (filePath, contents) => {
+  console.log("===overWriteFile===", filePath);
   try {
     return new Promise((resolve, reject) => {
       fs.appendFileSync(filePath, contents, "utf-8", function (err) {
@@ -63,6 +65,7 @@ const overWriteFile = async (filePath, contents) => {
 
 const generateGitignoreFile = async (contents) => {
   const filePath = path.resolve(path.join(process.cwd(), ".gitignore"));
+  console.log("filePath: ", filePath);
   const isExists = await fs.existsSync(filePath);
   if (isExists) {
     await overWriteFile(filePath, contents);
