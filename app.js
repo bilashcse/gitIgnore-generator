@@ -64,8 +64,7 @@ const overWriteFile = async (filePath, contents) => {
 };
 
 const generateGitignoreFile = async (contents) => {
-  console.log("===generateGitignoreFile===", __dirname);
-  const filePath = path.resolve(path.join(__dirname, ".gitignore"));
+  const filePath = path.resolve(path.join(process.cwd(), ".gitignore"));
   const isExists = await fs.existsSync(filePath);
   if (isExists) {
     await overWriteFile(filePath, contents);
