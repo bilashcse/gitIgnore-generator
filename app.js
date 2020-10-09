@@ -32,7 +32,6 @@ const getGeneratedFileValue = async (value = "node") => {
 const createFile = async (filePath, contents) => {
   try {
     return new Promise((resolve, reject) => {
-      console.log("== Current create Path ==", filePath);
       fs.writeFile(filePath, contents, "utf-8", function (err) {
         if (err) reject(err);
         else {
@@ -49,7 +48,6 @@ const createFile = async (filePath, contents) => {
 const overWriteFile = async (filePath, contents) => {
   try {
     return new Promise((resolve, reject) => {
-      console.log("== Current overwrite Path ==", filePath);
       fs.appendFileSync(filePath, contents, "utf-8", function (err) {
         if (err) reject(err);
         else {

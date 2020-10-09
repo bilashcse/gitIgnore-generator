@@ -1,7 +1,7 @@
 {
   "name": "gigen",
-  "version": "0.0.4",
-  "description": "",
+  "version": "0.0.5",
+  "description": ".gitignore file generate",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
